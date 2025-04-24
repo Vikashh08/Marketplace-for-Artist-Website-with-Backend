@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="contact.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Playfair+Display&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a2e00f7a45.js" crossorigin="anonymous"></script>
+  <script src="contact.js"></script>
+</head>
+<body>
+  <div>
+    <a href="index.html" id="ReHome">Return to Home</a>
+  </div>
+
+  <div class="animated-bg"></div>
+
+  <section class="contact-section">
+    <div class="contact-card">
+      <div class="text-side">
+        <h1>Get in Touch</h1>
+        <p>Have a question or just want to share your art vibes with us? Drop us a message!</p>
+          <form>
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button  type="submit">Send Message</button>
+            
+        </form>
+        <div class="social-icons">
+          <a href="#" class="icon" data-tooltip="Follow on Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="icon" data-tooltip="Connect on LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="#" class="icon" data-tooltip="View on Behance"><i class="fab fa-behance"></i></a>
+        </div>
+      </div>
+      <div class="image-side">
+        <img src="Explore img/francesco-bianco-TVsgRyKJDc0-unsplash.jpg" alt="Contact Illustration">
+      </div>
+    </div>
+  </section>
+<!-- Success Popup -->
+<div id="successPopup" class="popup">
+  <div class="popup-content">
+      <span class="close-popup">&times;</span>
+      <div class="popup-icon">🎉</div>
+      <h3>Message Sent Successfully!</h3>
+      <p>We'll get back to you within 24 hours</p>
+  </div>
+</div>
+
+<!-- Error Popup -->
+<div id="errorPopup" class="popup">
+  <div class="popup-content">
+      <span class="close-popup">&times;</span>
+      <div class="popup-icon">❌</div>
+      <h3>Message Failed to Send</h3>
+      <p class="error-message"></p>
+  </div>
+</div>
+</body>
+</html>

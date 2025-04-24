@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Explore Artworks</title>
+  <link rel="stylesheet" href="explore.css" />
+</head>
+<body>
+  <header class="header">
+    <h1>Explore Art</h1>
+    <div class="category-filter">
+      <button data-category="all" class="active">All</button>
+      <button data-category="Painting">Painting</button>
+      <button data-category="Digital Art">Digital Art</button>
+      <button data-category="Photography">Photography</button>
+    </div>
+  </header>
+
+  <section class="gallery">
+    <div class="art-card" data-category="Painting">
+      <img src="Explore img/nicola-powys-oz7w_okbI0Q-unsplash.jpg" alt="Painting 1" onclick="openLightbox(this.src)">
+      <div class="info">
+        <h3>Sunset Bliss</h3>
+        <p>₹1500</p>
+      </div>
+      <button>Add to Cart</button>
+    </div>
+
+    <div class="art-card" data-category="Painting">
+      <img src="Explore img/mcgill-library-y4PqRPqSako-unsplash.jpg" alt="Painting 2 " onclick="openLightbox(this.src)">
+      <div class="info">
+        <h3>Golden Horizon</h3>
+        <p>₹1800</p>
+      </div>
+      <button>Add to Cart</button>
+    </div>
+
+    <div class="art-card" data-category="Digital Art">
+      <img src="Explore img/birmingham-museums-trust-lhsfeT9WZ9M-unsplash.jpg" alt="Digital Art 1" onclick="openLightbox(this.src)">
+      <div class="info">
+        <h3>Dream Machine</h3>
+        <p>₹1200</p>
+      </div>
+      <button>Add to Cart</button>
+    </div>
+
+    <div class="art-card" data-category="Photography">
+      <img src="Explore img/birmingham-museums-trust-nenWeBmX9mY-unsplash.jpg" alt="Photography 1" onclick="openLightbox(this.src)">
+      <div class="info">
+        <h3>City Vibes</h3>
+        <p>₹900</p>
+      </div>
+      <button>Add to Cart</button>
+    </div>
+    <!-- Add these new artworks inside the .gallery section -->
+
+<div class="art-card" data-category="Painting">
+    <img src="birmingham-museums-trust-Kv1hYl9LlxU-unsplash.jpg" alt="Painting 3" onclick="openLightbox(this.src)">
+    <div class="info">
+      <h3>Misty Mountains</h3>
+      <p>₹2000</p>
+    </div>
+    <button>Add to Cart</button>
+  </div>
+  
+  <div class="art-card" data-category="Digital Art">
+    <img src="Explore img/europeana-DyBM95141iM-unsplash.jpg" alt="Digital Art 2" onclick="openLightbox(this.src)">
+    <div class="info">
+      <h3>Color Storm</h3>
+      <p>₹1600</p>
+    </div>
+    <button>Add to Cart</button>
+  </div>
+  
+  <div class="art-card" data-category="Photography">
+    <img src="Explore img/europeana-VsnDYMWollM-unsplash.jpg" alt="Photography 2" onclick="openLightbox(this.src)">
+    <div class="info">
+      <h3>Through the Lens</h3>
+      <p>₹1100</p>
+    </div>
+    <button>Add to Cart</button>
+  </div>
+  
+  <div class="art-card" data-category="Painting">
+    <img src="Explore img/europeana-WS7wycSbVuY-unsplash.jpg" alt="Painting 4" onclick="openLightbox(this.src)">
+    <div class="info">
+      <h3>Ocean Waves</h3>
+      <p>₹1750</p>
+    </div>
+    <button>Add to Cart</button>
+  </div>
+  <div class="art-card" data-category="Painting">
+    <img src="Explore img/francesco-bianco-TVsgRyKJDc0-unsplash.jpg" alt="Painting 4" onclick="openLightbox(this.src)">
+    <div class="info">
+      <h3>Ocean Waves</h3>
+      <p>₹1750</p>
+    </div>
+    <button>Add to Cart</button>
+  </div>
+  
+  <div class="art-card" data-category="Painting">
+    <img src="Explore img/mcgill-library--Ada_fz3sY8-unsplash.jpg" alt="Painting 4" onclick="openLightbox(this.src)">
+    <div class="info">
+      <h3>Ocean Waves</h3>
+      <p>₹1750</p>
+    </div>
+    <button>Add to Cart</button>
+  </div>
+  
+
+  </section>
+  <div class="cart-sidebar" id="cartSidebar">
+    <h2>Your Cart</h2>
+    <ul id="cartItems"></ul>
+    <p id="total">Total: ₹0</p>
+    
+    <button onclick="clearCart()">Clear Cart</button>
+  </div>
+<div class="cart-sidebar" id="cartSidebar">
+  <h2>Your Cart <span id="cartCount">0</span></h2>
+  <div id="cartItems" class="cart-items"></div>
+  <p id="cartTotal">Total: ₹0</p>
+  <button id="checkoutBtn" class="checkout-btn">Proceed to Checkout</button>
+  <button id="clearCartBtn" class="clear-cart-btn">Clear Cart</button>
+</div>
+  
+<button id="toggleCart">
+  🛒View Cart 
+</button>
+<div>
+  <a href="index.html" id="Home">🏠Home</a>
+</div>
+<div id="toast" class="toast">Item added to cart</div>
+
+<!-- Lightbox HTML -->
+<div id="lightbox" class="lightbox">
+    <span class="close-lightbox" onclick="closeLightbox()">&times;</span>
+    <img class="lightbox-content" id="lightboxImg">
+  </div>
+  
+  
+  <script src="explore.js"></script>
+</body>
+</html>

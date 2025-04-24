@@ -1,0 +1,206 @@
+
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+    height: 100%;
+    background: #f6f2eb;
+  }
+  
+  .boho-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to bottom right, rgb(230, 230, 183), rgba(141, 198, 196, 0.795));
+  }
+  
+  .boho-container {
+    display: flex;
+    flex-wrap: wrap;
+    background: #fffdf7;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    overflow: hidden;
+    max-width: 900px;
+    width: 90%;
+  }
+  
+  /* Art section */
+  .boho-art {
+    flex: 1;
+    min-width: 300px;
+    background-color: #f7f3ec;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .boho-art img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.85);
+    transition: transform 0.6s ease;
+  }
+  
+  .boho-art:hover img {
+    transform: scale(1.05) rotate(1deg);
+  }
+  
+  .text {
+    position: absolute;
+    bottom: 30px;
+    text-align: center;
+    padding: 0 20px;
+    color: #f6f3f2;
+    font-family: 'Playfair Display', serif;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  .boho-art:hover .text {
+    transform: scale(1.05);
+    color: #2e1406;
+  }
+  
+  .text h1 {
+    font-size: 2.3rem;
+    margin-bottom: 8px;
+  }
+  
+  .text p {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  
+  /* Login card */
+  .boho-login-card {
+    flex: 1;
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #fff9f3;
+  }
+  
+  .boho-login-card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: 600;
+  }
+  
+  .login-icon {
+    width: 48px;
+    margin: 0 auto 10px;
+  }
+  
+  .boho-login-card input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid #e6d3c4;
+    border-radius: 12px;
+    background: #fff;
+    transition: all 0.3s ease;
+  }
+  
+  .boho-login-card input:focus {
+    border-color: #f4a261;
+    outline: none;
+    background: #fffefb;
+    box-shadow: 0 0 5px #f4a26150;
+  }
+  
+  .boho-login-card button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    background: #f4a261;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+  
+  .boho-login-card button:hover {
+    background: #e76f51;
+    transform: scale(1.05);
+  }
+  
+  .boho-link {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+  
+  .boho-link a {
+    color: #ca6f1e;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .boho-link a:hover {
+    text-decoration: underline;
+    color: #a7540e;
+  }
+  
+    .login-icon {
+      width: 30%;
+      margin: 0 auto 10px;
+    }
+    
+    .boho-login-card input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 2px solid #e6d3c4;
+      border-radius: 12px;
+      background: #fff;
+      transition: all 0.3s ease;
+    }
+    
+    .boho-login-card input:focus {
+      border-color: #f4a261;
+      outline: none;
+      background: #fffefb;
+    }
+    
+    .boho-login-card button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 15px;
+      background: #f4a261;
+      color: white;
+      border: none;
+      border-radius: 12px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    
+    .boho-login-card button:hover {
+      background: #e76f51;
+    }
+    
+    .boho-link {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+    
+    .boho-link a {
+      color: #ca6f1e;
+      text-decoration: none;
+    }
+    
+    .boho-link a:hover {
+      text-decoration: underline;
+    }
+    
+ 

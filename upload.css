@@ -1,0 +1,225 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #fdfbfb, #ebedee);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .upload-container {
+    background: #ffffff;
+    padding: 40px 50px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 650px;
+    animation: fadeInUp 0.6s ease-in-out;
+    transition: transform 0.3s ease;
+  }
+  
+  .upload-container:hover {
+    transform: translateY(-5px);
+  }
+  
+  .upload-container h1 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 25px;
+    color: #2e2e2e;
+    position: relative;
+  }
+  
+  .upload-container h1::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #7f5af0;
+    margin: 10px auto 0;
+    border-radius: 5px;
+  }
+  
+  .upload-form input,
+  .upload-form textarea {
+    width: 100%;
+    padding: 15px 18px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+  }
+  
+  .upload-form input:hover,
+  .upload-form textarea:hover {
+    background-color: #f0f0f0;
+    box-shadow: 0 0 0 2px rgba(127, 90, 240, 0.1);
+  }
+  
+  .upload-form input:focus,
+  .upload-form textarea:focus {
+    outline: none;
+    border-color: #7f5af0;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(127, 90, 240, 0.2);
+  }
+  
+  .upload-box {
+    border: 2px dashed #b3b3b3;
+    background-color: #fafafa;
+    padding: 50px 20px;
+    text-align: center;
+    border-radius: 15px;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    color: #666;
+    font-size: 1rem;
+  }
+  
+  .upload-box:hover {
+    border-color: #7f5af0;
+    background-color: #f0edff;
+    transform: scale(1.02);
+    color: #4d3cc3;
+  }
+  
+  #previewBox img {
+    margin-top: 20px;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    object-fit: contain;
+    border: 1px solid #eee;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+  }
+  
+  
+  #previewBox img:hover {
+    transform: scale(1.03);
+  }
+  
+  .upload-form button {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #7f5af0, #5a35e0);
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .upload-form button:hover {
+    background: linear-gradient(135deg, #5a35e0, #4322c4);
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(90, 53, 224, 0.3);
+  }
+  
+  @keyframes fadeInUp {
+    0% {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  }
+  
+  .gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.art-image {
+  width: 200px;
+  height: auto;
+  margin: 10px;
+  border: 4px solid #fff;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.art-image:hover {
+  transform: scale(1.05);
+  border-color: #0088cc;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+  background: #f5f5f5;
+  padding: 40px;
+}
+
+form {
+  margin-bottom: 30px;
+}
+
+button {
+  padding: 10px 20px;
+  background: #0088cc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #006699;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.art-image {
+  width: 200px;
+  margin: 10px;
+  border: 4px solid #fff;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.art-image:hover {
+  transform: scale(1.05);
+  border-color: #0088cc;
+}
+.preview-image {
+    max-width: 100%;
+    max-height: 300px;
+    margin-top: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.upload-box.dragover {
+    border-color: #7f5af0;
+    background-color: #f0edff;
+}
+
+.loading-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.8);
+    z-index: 999;
+    justify-content: center;
+    align-items: center;
+}

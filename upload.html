@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Upload Art - कला घर</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="upload.css" />
+</head>
+<body>
+  <div id="userGallery" class="gallery"></div>
+
+  <div class="upload-container">
+    <h1>Upload Artwork</h1>
+    <form action="upload.php" method="post" class="upload-form" id="artUploadForm" enctype="multipart/form-data">
+      <input type="text" name="title" id="title" placeholder="Title of the artwork" required />
+
+      <textarea name="description" id="description" rows="4" placeholder="Describe your artwork (style, inspiration, etc.)" required></textarea>
+      
+      <input type="text" name="category" id="category" placeholder="Category / Tags (e.g. Abstract, Nature, Portrait)" required />
+      
+      <input type="number" name="price" id="price" placeholder="Price in USD ($)" required />
+      
+      <input type="file" name="art" id="imageInput" accept="image/*" required />
+      
+<!-- 
+      <div class="upload-box" id="drop-area">
+        <p>Drag & drop your image here or click to browse</p>
+        <input type="file" name="art" id="imageInput" accept="image/*" hidden required>
+        <div id="previewBox"></div>
+      </div> -->
+
+      <button type="submit">Submit Artwork</button>
+    </form>
+  </div>
+
+  <script src="upload.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const form = document.getElementById("artUploadForm");
+      const imageInput = document.getElementById("imageInput");
+  
+      form.addEventListener("submit", async function (e) {
+        e.preventDefault();
+  
+        const formData = new FormData();
+        formData.append("art", imageInput.files[0]);
+  
+        const imageUploadRes = await fetch("upload.php", {
+          method: "POST",
+          body: formData
+        });
+  
+        const uploadData = await imageUploadRes.json();
+  
+        if (uploadData.status === 1) {
+          const saveArtRes = await fetch("save_art.php", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              title: form.title.value,
+              description: form.description.value,
+              category: form.category.value,
+              price: form.price.value,
+              username: "vikash",
+              imagePath: uploadData.path
+            })
+          });
+  
+          const saveArtResult = await saveArtRes.json();
+          alert(saveArtResult.message);
+          form.reset();
+          document.getElementById("previewBox").innerHTML = '';
+        } else {
+          alert("Upload failed: " + uploadData.message);
+        }
+      });
+    });
+  </script>
+  
+  
+</body>
+</html>
